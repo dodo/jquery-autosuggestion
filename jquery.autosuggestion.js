@@ -61,12 +61,14 @@
                         val += String.fromCharCode(code);
                 }
                 preview.find('.'+classprefix+'content').text(val+" ");
-                el.val(val);
+                var suffix = "";
                 if (typeof options.suffix === 'function') {
-                    var suffix = options.suffix(val);
-                    preview.find('.'+classprefix+'suffix').text(suffix);
-                    el.val(val+suffix);
+                    suffix = options.suffix(val);
+                } else {
+                    suffix = options.suffix || "";
                 }
+                preview.find('.'+classprefix+'suffix').text(suffix);
+                el.val(val+suffix);
             });
 
             // insert into dom
