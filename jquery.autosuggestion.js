@@ -19,7 +19,7 @@
                 "id=\""+classprefix+el.prop('id')+"\"/>");
 
 
-            var suffix = options.suffix;
+            var suffix = options.suffix || "";
             if (typeof options.suffix === 'function')
                 suffix = options.suffix(el.val());
             // creating the area where the suggestions can be showen
