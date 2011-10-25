@@ -16,17 +16,19 @@
             // creating a completly new input field
             var input = $("<input type=\""+el.prop('type')+"\" "+
                 "class=\""+classprefix+"input\" "+
-                "id=\""+classprefix+el.prop('id')+"\"/>");
+                "id=\""+classprefix+el.prop('id')+"\" "+
+                "value=\""+el.val()+"\"/>");
 
 
             var suffix = options.suffix || "";
             if (typeof options.suffix === 'function')
                 suffix = options.suffix(el.val());
+
             // creating the area where the suggestions can be showen
             var preview = $("<div class=\""+classprefix+"preview\">"+
                 //"<span class=\""+classprefix+"prefix\"></span>"+ TODO
-                "<span class=\""+classprefix+"content\"></span>"+
-                "<span class=\""+classprefix+"suffix\">"+suffix+"</span>"+
+                "<span class=\""+classprefix+"content\">"+el.val()+"</span>"+
+                "<span class=\""+classprefix+"suffix\"> "+ suffix +"</span>"+
                 "&nbsp;</div>");
 
             var container = $("<div class=\""+classprefix+"container\"></div>");
