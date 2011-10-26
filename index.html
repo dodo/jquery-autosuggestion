@@ -88,13 +88,13 @@ what you can see and get from the input field:
 <input type="text" id="demo" placeholder="try it ..." required/>
 <script type="text/javascript">
 $(document).ready(function () {
-    $('#demo').autoSuggestion(function (val) {
+    $('#demo').autoSuggestion({suffix:function (val) {
         if (val === "" || val.indexOf("@") !== -1) {
             return "";
         } else {
             return "@domain.lit";
         }
-    });
+    }});
 });
 </script>
 </p><h2>Dependencies</h2>
