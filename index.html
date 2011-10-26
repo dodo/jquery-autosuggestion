@@ -63,7 +63,21 @@ what you type in:
 what you can see and get from the input field:
 
     [test@domain.lit]
-</pre></p><h2>Dependencies</h2>
+</pre></p>
+<h2>Demo</h2><p>
+<input type="text" id="demo" placeholder="try it ..." required/>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#demo').autoSuggestion(function (val) {
+        if (val === "" || val.indexOf("@") !== -1) {
+            return "";
+        } else {
+            return "@domain.lit";
+        }
+    });
+});
+</script>
+</p><h2>Dependencies</h2>
 <p><ul>
 <li><a href="http://jquery.com">jQuery</a></li>
 <li><a href="http://plugins.jquery.com/project/copyCSS">copyCSS</a></li>
