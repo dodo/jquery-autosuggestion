@@ -56,7 +56,8 @@
             });
 
             // pipe keys through
-            (input.input || input.keyup)(function (ev) {
+            var oninput;
+            (input.input || input.keyup)(oninput = function (ev) {
                 var code = ev.keyCode || ev.which;
                 var val = input.val();
                 if (ev.type === 'keydown') {
@@ -73,6 +74,7 @@
                 preview.find('.'+classprefix+'suffix').text(suffix);
                 el.val(val+suffix);
             });
+            oninput();
 
             // insert into dom
             el.before(container);
