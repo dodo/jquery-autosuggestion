@@ -1,5 +1,6 @@
 // by dodo
 // this depends on http://plugins.jquery.com/project/copyCSS
+// works best with https://github.com/dodo/jquery-inputevent
 
 (function( $ ) {
 
@@ -55,7 +56,7 @@
             });
 
             // pipe keys through
-            input.keyup(function (ev) {
+            (input.input || input.keyup)(function (ev) {
                 var code = ev.keyCode || ev.which;
                 var val = input.val();
                 if (ev.type === 'keydown') {
