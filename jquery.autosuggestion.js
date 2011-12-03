@@ -58,6 +58,7 @@
             // pipe keys through
             var oninput;
             (input.input || input.keyup)(oninput = function (ev) {
+                ev = || {};
                 var code = ev.keyCode || ev.which;
                 var val = input.val();
                 if (ev.type === 'keydown') {
