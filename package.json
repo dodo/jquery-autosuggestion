@@ -1,8 +1,9 @@
 { "name": "jquery-autosuggestion"
 , "description": "a simple jquery plugin with which input fields can be extended so that they show a suggestion part"
-, "version": "0.0.2"
+, "version": "0.0.3"
 , "homepage": "https://github.com/dodo/jquery-autosuggestion"
-, "author": "dodo (https://github.com/dodo)"
+, "author": "dodo (https://github.com/dodo)"i
+, "main": "jquery.autosuggestion.js"
 , "repository": {"type": "git", "url": "git://github.com/dodo/jquery-autosuggestion.git"}
 , "engines": {"browser": ""}
 }

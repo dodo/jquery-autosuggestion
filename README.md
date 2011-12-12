@@ -30,7 +30,7 @@ $('input[type="email"]').autoSuggestion({suffix:function (val) {
 }});
 ```
 
-if you want to have a mor robust responsebility you can add the special input event plugin which uses the new `oninput` event and works for old browsers as well.
+if you want to have a more robust responsebility you can add the special input event plugin which uses the new `oninput` event and works for old browsers as well.
 
 ## depends on
 
